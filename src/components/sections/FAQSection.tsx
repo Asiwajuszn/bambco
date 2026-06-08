@@ -43,7 +43,7 @@ export default function FAQSection() {
                 background: open === i ? "#002E9B" : "transparent",
                 color: open === i ? "#A8F5D0" : "#002E9B",
                 transform: open === i ? "rotate(45deg)" : "none",
-              }} />
+              }}>+</div>
               +
             </div>
             <div
