@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --blue: #002E9B;
+  --blue-dark: #001d6b;
+  --blue-light: #0040cc;
+  --mint: #A8F5D0;
+  --mint-dark: #6ee8b0;
+  --off: #f4f7ff;
+  --text: #0a0f2e;
+  --muted: #4a5068;
+  --border: rgba(0, 46, 155, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Animated hero grid background */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(168, 245, 208, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 245, 208, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Pulse dot animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
+
+/* Fade-up animation */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.7s ease forwards;
+}
+.delay-100 { animation-delay: 0.1s; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+.delay-300 { animation-delay: 0.3s; opacity: 0; }
+.delay-400 { animation-delay: 0.4s; opacity: 0; }
+
+/* Step card hover */
+.step-card {
+  transition: background 0.2s, color 0.2s;
+}
+.step-card:hover {
+  background: var(--blue);
+}
+.step-card:hover .step-title,
+.step-card:hover .step-num,
+.step-card:hover .step-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+.step-card:hover .step-icon {
+  background: rgba(168, 245, 208, 0.2);
+  color: var(--mint);
+}
+
+/* WhatsApp float button */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 200;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.wa-float:hover {
+  transform: scale(1.1);
+}
+
+/* FAQ accordion */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+.faq-answer.open {
+  max-height: 200px;
+  padding-bottom: 20px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f4f7ff; }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
