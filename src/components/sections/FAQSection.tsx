@@ -37,16 +37,9 @@ export default function FAQSection() {
             >
               {f.q}
               <div style={{
-<<<<<<< HEAD
                 fontSize: 18,
                 transition: "all .2s",
                 fontWeight: 300,
-=======
-                width: 28, height: 28, minWidth: 28, borderRadius: "50%",
-                border: "1.5px solid rgba(0,46,155,0.2)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 18, transition: "all .2s", fontWeight: 300,
->>>>>>> ed286306d5469e685cd122d0839479752fe9d680
                 background: open === i ? "#002E9B" : "transparent",
                 color: open === i ? "#A8F5D0" : "#002E9B",
                 transform: open === i ? "rotate(45deg)" : "none",
