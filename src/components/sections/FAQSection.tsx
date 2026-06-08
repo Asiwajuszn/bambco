@@ -37,16 +37,14 @@ export default function FAQSection() {
             >
               {f.q}
               <div style={{
-                width: 28, height: 28, minWidth: 28, borderRadius: "50%",
-                border: "1.5px solid rgba(0,46,155,0.2)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 18, color: "#002E9B", transition: "all .2s", fontWeight: 300,
+                fontSize: 18,
+                transition: "all .2s",
+                fontWeight: 300,
                 background: open === i ? "#002E9B" : "transparent",
                 color: open === i ? "#A8F5D0" : "#002E9B",
                 transform: open === i ? "rotate(45deg)" : "none",
-              } as React.CSSProperties}>
-                +
-              </div>
+              }} />
+              +
             </div>
             <div
               className={`faq-answer ${open === i ? "open" : ""}`}
